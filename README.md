@@ -8,8 +8,8 @@ serviceCollection.AddValorantDotNet();
 ```
 This will configure your DI container (assuming you are using the out the box .net di).
 ## Todo:
-- [x] Account/GetByPuuid
-- [ ] Account/GetByRiotId
+- [ ] Account/GetByPuuid
+- [x] Account/GetByRiotId
 - [ ] Account/GetActiveShardByPuuid
 
 - [ ] Content/GetContents
