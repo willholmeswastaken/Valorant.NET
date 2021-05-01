@@ -24,32 +24,40 @@ namespace Valorant.NET.IntegrationTests.Account
         [Fact]
         public async Task GetByRiotId_Should_return_200_ok()
         {
-            var gameName = "SevenZ";
-            var tagLine = "2070";
-
             var account = new AccountClient(new RiotTokenResolver(), new RiotApiUrlResolver(), new RiotApiResponseHandler());
 
-            var response = await account.GetByRiotId(gameName, tagLine);
+            var response = await account.GetByRiotId(_fixture.Config.GameName, _fixture.Config.TagLine);
 
             response.Should().NotBeNull();
-            response.Puuid.Should().NotBeNullOrWhiteSpace();
-            response.GameName.Should().Be(gameName);
-            response.TagLine.Should().Be(tagLine);
+            response.Puuid.Should().Be(_fixture.Config.Puuid);
+            response.GameName.Should().Be(_fixture.Config.GameName);
+            response.TagLine.Should().Be(_fixture.Config.TagLine);
         }
 
         [Fact]
         public async Task GetByPuuid_Should_return_200_ok()
         {
-            var puuid = "cgonD5hiAvh0KIXi324gdN-_SKKPp-UiSxfOZeEkO3NL4fr2cODZ15ZbDi-dOltm7_O9c1wXucnIZg";
-
             var account = new AccountClient(new RiotTokenResolver(), new RiotApiUrlResolver(), new RiotApiResponseHandler());
 
-            var response = await account.GetByPuuid(puuid);
+            var response = await account.GetByPuuid(_fixture.Config.Puuid);
 
             response.Should().NotBeNull();
-            response.Puuid.Should().Be(puuid);
-            response.GameName.Should().Be("SevenZ");
-            response.TagLine.Should().Be("2070");
+            response.Puuid.Should().Be(_fixture.Config.Puuid);
+            response.GameName.Should().Be(_fixture.Config.GameName);
+            response.TagLine.Should().Be(_fixture.Config.TagLine);
+        }
+
+        [Fact]
+        public async Task GetActiveShardByPuuid_Should_return_200_ok()
+        {
+            var account = new AccountClient(new RiotTokenResolver(), new RiotApiUrlResolver(), new RiotApiResponseHandler());
+
+            var response = await account.GetActivePlayerShard(_fixture.Config.Puuid);
+
+            response.Should().NotBeNull();
+            response.Puuid.Should().Be(_fixture.Config.Puuid);
+            response.Game.Should().Be("val");
+            response.activeShard.Should().Be("eu");
         }
     }
 }

@@ -24,5 +24,13 @@ namespace Valorant.NET.Account
         /// <param name="region">Api url region, choose the closest to you</param>
         /// <returns>Account details</returns>
         Task<AccountResponse> GetByPuuid(string puuid, Region region = Region.Europe);
+
+
+        /// <summary>
+        /// Retrieves the active player shard such as eu, na etc.
+        /// </summary>
+        /// <param name="puuid">Player universally unique identifier</param>
+        /// <returns>Active shard with puuid</returns>
+        Task<AccountShardResponse> GetActivePlayerShard(string puuid, Region region = Region.Europe);
     }
 }
