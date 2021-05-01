@@ -34,8 +34,25 @@ namespace Valorant.NET.Account
             {
                 var response = await _riotHttpClient.GetAsync(url);
                 await _riotApiResponseHandler.Execute(response);
+                return JsonConvert.DeserializeObject<AccountResponse>(await response.Content.ReadAsStringAsync());
+            }
+            catch (Exception ex)
+            {
+                throw new RiotApiException(url.ToString(), ex);
+            }
+        }
 
-                return JsonConvert.DeserializeObject<AccountResponse>(await (response.Content.ReadAsStringAsync()));
+        public async Task<AccountResponse> GetByPuuid(string puuid, Region region = Region.Europe)
+        {
+            if (string.IsNullOrWhiteSpace(puuid)) throw new ArgumentNullException(nameof(puuid));
+
+            var url = _riotApiUrlResolver.Resolve(region, $"{AccountsUrl}/by-puuid/{puuid}");
+
+            try
+            {
+                var response = await _riotHttpClient.GetAsync(url);
+                await _riotApiResponseHandler.Execute(response);
+                return JsonConvert.DeserializeObject<AccountResponse>(await response.Content.ReadAsStringAsync());
             }
             catch (Exception ex)
             {
