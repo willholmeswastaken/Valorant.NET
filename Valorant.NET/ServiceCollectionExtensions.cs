@@ -10,6 +10,7 @@ namespace Valorant.NET
         public static void AddValorantDotNet(this IServiceCollection services)
         {
             services.AddSingleton<IRiotTokenResolver, RiotTokenResolver>();
+            services.AddSingleton<IRiotApiUrlResolver, RiotApiUrlResolver>();
             services.AddScoped<IRiotApiResponseHandler, RiotApiResponseHandler>();
             services.AddScoped<IAccountClient, AccountClient>();
         }

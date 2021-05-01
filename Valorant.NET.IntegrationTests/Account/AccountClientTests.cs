@@ -12,25 +12,15 @@ using Xunit;
 
 namespace Valorant.NET.IntegrationTests.Account
 {
-    public class AccountClientTests
+    public class AccountClientTests : IClassFixture<RiotApiTestFixture>
     {
-        public AccountClientTests()
-        {
-            using (StreamReader r = new StreamReader("testConfig.json"))
-            {
-                string json = r.ReadToEnd();
-                TestConfig config = JsonConvert.DeserializeObject<TestConfig>(json);
-                Environment.SetEnvironmentVariable(Constants.RIOT_API_TOKEN, config.RiotToken);
-            }
-        }
-
         [Fact]
         public async Task Should_return_200_ok()
         {
             var gameName = "SevenZ";
             var tagLine = "2070";
 
-            var account = new AccountClient(new RiotTokenResolver(), new RiotApiResponseHandler());
+            var account = new AccountClient(new RiotTokenResolver(), new RiotApiUrlResolver(), new RiotApiResponseHandler());
 
             var response = await account.GetByRiotId(gameName, tagLine);
 

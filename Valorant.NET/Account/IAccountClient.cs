@@ -6,7 +6,7 @@ using Valorant.NET.Models;
 
 namespace Valorant.NET.Account
 {
-    public interface IAccountClient : IDisposable
+    public interface IAccountClient
     {
         /// <summary>
         /// Retrieves the account by the riot id of the user i.e. SevenZ#2070

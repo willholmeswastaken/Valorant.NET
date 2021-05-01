@@ -25,10 +25,4 @@
     <ProjectReference Include="..\Valorant.NET\Valorant.NET.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="testConfig.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>
