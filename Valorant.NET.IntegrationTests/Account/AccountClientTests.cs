@@ -1,9 +1,5 @@
 ﻿using FluentAssertions;
-using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 using Valorant.NET.Account;
 using Valorant.NET.Handlers;
@@ -12,21 +8,21 @@ using Xunit;
 
 namespace Valorant.NET.IntegrationTests.Account
 {
-    public class AccountClientTests : IClassFixture<RiotApiTestFixture>
+    public class AccountClientTests : IClassFixture<RiotApiTestFixture>, IDisposable
     {
         private readonly RiotApiTestFixture _fixture;
+        private readonly AccountClient _accountClient;
 
         public AccountClientTests(RiotApiTestFixture fixture)
         {
             _fixture = fixture;
+            _accountClient = new AccountClient(new RiotTokenResolver(), new RiotApiUrlResolver(), new RiotApiResponseHandler());
         }
 
         [Fact]
         public async Task GetByRiotId_Should_return_200_ok()
         {
-            var account = new AccountClient(new RiotTokenResolver(), new RiotApiUrlResolver(), new RiotApiResponseHandler());
-
-            var response = await account.GetByRiotId(_fixture.Config.GameName, _fixture.Config.TagLine);
+            var response = await _accountClient.GetByRiotId(_fixture.Config.GameName, _fixture.Config.TagLine);
 
             response.Should().NotBeNull();
             response.Puuid.Should().Be(_fixture.Config.Puuid);
@@ -37,9 +33,7 @@ namespace Valorant.NET.IntegrationTests.Account
         [Fact]
         public async Task GetByPuuid_Should_return_200_ok()
         {
-            var account = new AccountClient(new RiotTokenResolver(), new RiotApiUrlResolver(), new RiotApiResponseHandler());
-
-            var response = await account.GetByPuuid(_fixture.Config.Puuid);
+            var response = await _accountClient.GetByPuuid(_fixture.Config.Puuid);
 
             response.Should().NotBeNull();
             response.Puuid.Should().Be(_fixture.Config.Puuid);
@@ -50,14 +44,17 @@ namespace Valorant.NET.IntegrationTests.Account
         [Fact]
         public async Task GetActiveShardByPuuid_Should_return_200_ok()
         {
-            var account = new AccountClient(new RiotTokenResolver(), new RiotApiUrlResolver(), new RiotApiResponseHandler());
-
-            var response = await account.GetActivePlayerShard(_fixture.Config.Puuid);
+            var response = await _accountClient.GetActivePlayerShard(_fixture.Config.Puuid);
 
             response.Should().NotBeNull();
             response.Puuid.Should().Be(_fixture.Config.Puuid);
             response.Game.Should().Be("val");
             response.activeShard.Should().Be("eu");
+        }
+
+        public void Dispose()
+        {
+            _accountClient.Dispose();
         }
     }
 }
