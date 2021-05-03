@@ -6,7 +6,7 @@ using Valorant.NET.Handlers;
 using Valorant.NET.Resolvers;
 using Xunit;
 
-namespace Valorant.NET.IntegrationTests.Account
+namespace Valorant.NET.IntegrationTests.Clients.Account
 {
     public class AccountClientTests : IClassFixture<RiotApiTestFixture>, IDisposable
     {

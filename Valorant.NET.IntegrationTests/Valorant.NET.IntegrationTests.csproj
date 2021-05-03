@@ -30,4 +30,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Clients\" />
+    <Folder Include="Clients\Account\" />
+    <Folder Include="Clients\Ranked\" />
+  </ItemGroup>
 </Project>

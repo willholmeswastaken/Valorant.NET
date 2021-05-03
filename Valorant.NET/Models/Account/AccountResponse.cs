@@ -1,9 +1,6 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Valorant.NET.Models
+namespace Valorant.NET.Models.Account
 {
     public class AccountResponse
     {

@@ -1,9 +1,8 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using Valorant.NET.Handlers;
 using Valorant.NET.Models;
-using Valorant.NET.Models.Exceptions;
+using Valorant.NET.Models.Account;
 using Valorant.NET.Resolvers;
 
 namespace Valorant.NET.Clients.Account

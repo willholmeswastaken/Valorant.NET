@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace Valorant.NET.Models
+namespace Valorant.NET.Models.Account
 {
     public class AccountShardResponse
     {

@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Valorant.NET.Models;
+using Valorant.NET.Models.Account;
 
 namespace Valorant.NET.Clients.Account
 {

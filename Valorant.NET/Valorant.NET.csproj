@@ -12,5 +12,8 @@
   <ItemGroup>
     <Folder Include="Clients\" />
     <Folder Include="Clients\Account\" />
+    <Folder Include="Clients\Ranked\" />
+    <Folder Include="Models\Account\" />
+    <Folder Include="Models\Ranked\" />
   </ItemGroup>
 </Project>

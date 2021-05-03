@@ -25,5 +25,10 @@ namespace Valorant.NET.IntegrationTests
         /// Your player universally unique identifier
         /// </summary>
         public string Puuid { get; set; }
+
+        /// <summary>
+        /// The current act guid you can find this from the content api
+        /// </summary>
+        public string CurrentActId { get; set; }
     }
 }
