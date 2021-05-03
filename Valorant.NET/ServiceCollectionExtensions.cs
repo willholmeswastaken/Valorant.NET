@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Valorant.NET.Account;
+using Valorant.NET.Clients.Account;
+using Valorant.NET.Clients.Ranked;
 using Valorant.NET.Handlers;
 using Valorant.NET.Resolvers;
 
@@ -13,6 +14,7 @@ namespace Valorant.NET
             services.AddSingleton<IRiotApiUrlResolver, RiotApiUrlResolver>();
             services.AddScoped<IRiotApiResponseHandler, RiotApiResponseHandler>();
             services.AddScoped<IAccountClient, AccountClient>();
+            services.AddScoped<IRankedClient, RankedClient>();
         }
     }
 }
