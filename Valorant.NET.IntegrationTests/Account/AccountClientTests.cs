@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using System;
 using System.Threading.Tasks;
-using Valorant.NET.Account;
+using Valorant.NET.Clients.Account;
 using Valorant.NET.Handlers;
 using Valorant.NET.Resolvers;
 using Xunit;

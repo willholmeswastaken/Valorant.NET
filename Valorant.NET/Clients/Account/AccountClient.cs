@@ -6,7 +6,7 @@ using Valorant.NET.Models;
 using Valorant.NET.Models.Exceptions;
 using Valorant.NET.Resolvers;
 
-namespace Valorant.NET.Account
+namespace Valorant.NET.Clients.Account
 {
     public class AccountClient : BaseRiotClient, IAccountClient
     {
