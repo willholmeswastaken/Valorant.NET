@@ -14,8 +14,9 @@ This will configure your DI container (assuming you are using the out the box .n
 
 - [ ] Content/GetContents
 
-- [ ] Ranked/GetLeaderboardByAct
+- [x] Ranked/GetLeaderboardByAct
 
 - [ ] Matches/GetByPuuid
 - [ ] Matches/GetById
 - [ ] Matches/ByQueue
+- [ ] Implement more granular riot api exception handling
