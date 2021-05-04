@@ -26,7 +26,9 @@ All of which expose the relevant api endpoint methods to retrieve your response.
 
 
 ### NOTE: As of present I cannot access these apis, so I will postpone this implementation until I do.
-### Or if someone would like to open a pull request to do this, I would be eternally grateful
 - [ ] Matches/GetByPuuid
 - [ ] Matches/GetById
 - [ ] Matches/ByQueue
+
+# Disclaimer
+This package is not supported or endorsed by Riot Games. Any use of this package is at your own risk. I take no responsibility over the use of this package. By downloading through Nuget, you agree to these conditions.
