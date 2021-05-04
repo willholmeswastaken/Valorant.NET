@@ -14,10 +14,10 @@ namespace Valorant.NET
     {
         public static void AddValorantDotNet(this IServiceCollection services)
         {
-            services.AddSingleton<IRiotHttpClient, RiotHttpClient>();
+            services.AddScoped<IRiotHttpClient, RiotHttpClient>();
             services.AddSingleton<IRiotTokenResolver, RiotTokenResolver>();
             services.AddSingleton<IRiotApiUrlResolver, RiotApiUrlResolver>();
-            services.AddScoped<IRiotApiResponseHandler, RiotApiResponseHandler>();
+            services.AddSingleton<IRiotApiResponseHandler, RiotApiResponseHandler>();
 
             services.AddScoped<IAccountClient, AccountClient>();
             services.AddScoped<IRankedClient, RankedClient>();

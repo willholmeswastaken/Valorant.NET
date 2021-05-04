@@ -27,7 +27,7 @@ namespace Valorant.NET.Clients.Ranked
             if (string.IsNullOrWhiteSpace(actId)) throw new ArgumentNullException(nameof(actId));
             if ((startPositionIndex + 1) > numberOfPlayersToReturn) throw new StartPositionGreaterThanTotalPlayersReturnedException(startPositionIndex, numberOfPlayersToReturn);
 
-            var url = _riotApiUrlResolver.Resolve(region, $"{RankedUrl}/leaderboards/by-act/{actId}?size={numberOfPlayersToReturn}&?startIndex={startPositionIndex}");
+            var url = _riotApiUrlResolver.Resolve(region, $"{RankedUrl}/leaderboards/by-act/{actId}?size={numberOfPlayersToReturn}&startIndex={startPositionIndex}");
 
             return await _httpClient.GetAsync<RankedResponse>(url);
         }
