@@ -1,4 +1,4 @@
-# Valorant.NET SDK
+<h1 align="center">*Unofficial* Valorant Dotnet SDK</h1>
 This is package built to allow .NET developers to interact with the valorant api.
 
 # How to use
