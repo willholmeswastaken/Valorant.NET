@@ -1,7 +1,9 @@
-<h1 align="center">*Unofficial* Valorant Dotnet SDK</h1>
-<p align="center">This is a package built to allow .NET developers to interact with the valorant api.</p>
-![Downloads Badge](https://img.shields.io/nuget/dt/ValorantDotNet)
+# *Unofficial* Valorant Dotnet SDK
+This is a package built to allow .NET developers to interact with the valorant api.  
+[![Downloads Badge](https://img.shields.io/nuget/dt/ValorantDotNet)](https://www.nuget.org/packages/ValorantDotNet/1.0.0)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+![Maintaner](https://img.shields.io/badge/maintainer-willholmeswastaken-blue)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 # How to use
 In Startup.cs add this
 ```
