@@ -9,12 +9,12 @@
 
 # Test-specific files
 /Valorant.NET.IntegrationTests/testConfig.json
-/Valorant.NET.IntegrationTests/TestResults
-/Valorant.NET.IntegrationTests/coveragereport
-/Valorant.NET.UnitTests/TestResults
-/Valorant.NET.UnitTests/coveragereport
-TestResults
-coveragereport
+/Valorant.NET.IntegrationTests/TestResults/
+/Valorant.NET.IntegrationTests/coveragereport/
+/Valorant.NET.UnitTests/TestResults/
+/Valorant.NET.UnitTests/coveragereport/
+TestResults/
+coveragereport/
 
 
 # User-specific files
