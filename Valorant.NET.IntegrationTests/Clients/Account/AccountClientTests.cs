@@ -50,7 +50,7 @@ namespace Valorant.NET.IntegrationTests.Clients.Account
             response.Should().NotBeNull();
             response.Puuid.Should().Be(_fixture.Config.Puuid);
             response.Game.Should().Be("val");
-            response.activeShard.Should().Be("eu");
+            response.ActiveShard.Should().Be("eu");
         }
 
         public void Dispose()

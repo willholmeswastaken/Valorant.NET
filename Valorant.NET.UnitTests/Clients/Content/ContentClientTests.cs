@@ -31,7 +31,7 @@ namespace Valorant.NET.UnitTests.Clients.Content
             mockRiotHttpClient.Setup(x => x.GetAsync<ContentResponse>(It.Is<Uri>(inputUri => inputUri == expectedUri)))
                 .ReturnsAsync(new ContentResponse { Version = expectContentVersion });
 
-            var contentClient = new ContentClient(mockRiotHttpClient.Object, mockApiUrlResolver.Object);
+            using var contentClient = new ContentClient(mockRiotHttpClient.Object, mockApiUrlResolver.Object);
 
             var response = await contentClient.GetContentOptionallyFilteredByLocale();
 

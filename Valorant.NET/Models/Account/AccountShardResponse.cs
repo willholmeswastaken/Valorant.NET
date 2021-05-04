@@ -14,6 +14,6 @@ namespace Valorant.NET.Models.Account
         public string Game { get; set; }
 
         [JsonProperty("activeShard")]
-        public string activeShard { get; set; }
+        public string ActiveShard { get; set; }
     }
 }
