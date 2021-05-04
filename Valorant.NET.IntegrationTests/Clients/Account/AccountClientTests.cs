@@ -20,7 +20,7 @@ namespace Valorant.NET.IntegrationTests.Clients.Account
         }
 
         [Fact]
-        public async Task GetByRiotId_Should_return_200_ok()
+        public async Task GetByRiotId_Should_return_player_profile()
         {
             var response = await _accountClient.GetByRiotId(_fixture.Config.GameName, _fixture.Config.TagLine);
 
@@ -31,7 +31,7 @@ namespace Valorant.NET.IntegrationTests.Clients.Account
         }
 
         [Fact]
-        public async Task GetByPuuid_Should_return_200_ok()
+        public async Task GetByPuuid_Should_return_player_profile()
         {
             var response = await _accountClient.GetByPuuid(_fixture.Config.Puuid);
 
@@ -42,7 +42,7 @@ namespace Valorant.NET.IntegrationTests.Clients.Account
         }
 
         [Fact]
-        public async Task GetActiveShardByPuuid_Should_return_200_ok()
+        public async Task GetActiveShardByPuuid_Should_return_player_profile()
         {
             var response = await _accountClient.GetActivePlayerShard(_fixture.Config.Puuid);
 
