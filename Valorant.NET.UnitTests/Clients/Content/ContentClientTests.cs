@@ -1,8 +1,6 @@
 ﻿using FluentAssertions;
 using Moq;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Valorant.NET.Clients;
 using Valorant.NET.Clients.Content;
