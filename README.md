@@ -4,7 +4,13 @@ This is a package built to allow .NET developers to interact with the valorant a
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 ![Maintaner](https://img.shields.io/badge/maintainer-willholmeswastaken-blue)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-# How to use
+
+## Getting Started
+```
+Install-Package ValorantDotNet -Version 1.0.0
+```
+
+# How to use the library
 In Startup.cs add this
 ```
 serviceCollection.AddValorantDotNet();
