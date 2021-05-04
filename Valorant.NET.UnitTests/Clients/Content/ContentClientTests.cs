@@ -11,7 +11,7 @@ using Valorant.NET.Models.Content;
 using Valorant.NET.Resolvers;
 using Xunit;
 
-namespace Valorant.NET.UnitTests.Clients
+namespace Valorant.NET.UnitTests.Clients.Content
 {
     public class ContentClientTests 
     {

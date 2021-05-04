@@ -24,7 +24,7 @@ namespace Valorant.NET.Clients.Ranked
 
         public async Task<RankedResponse> GetLeaderboardByAct(string actId, int startPositionIndex, int numberOfPlayersToReturn = MaximumPlayersReturnedByRequest, ValorantEndpointRegion region = ValorantEndpointRegion.EU)
         {
-            if (string.IsNullOrWhiteSpace(actId)) throw new ArgumentNullException(actId);
+            if (string.IsNullOrWhiteSpace(actId)) throw new ArgumentNullException(nameof(actId));
             if ((startPositionIndex + 1) > numberOfPlayersToReturn) throw new StartPositionGreaterThanTotalPlayersReturnedException(startPositionIndex, numberOfPlayersToReturn);
 
             var url = _riotApiUrlResolver.Resolve(region, $"{RankedUrl}/leaderboards/by-act/{actId}?size={numberOfPlayersToReturn}&?startIndex={startPositionIndex}");
