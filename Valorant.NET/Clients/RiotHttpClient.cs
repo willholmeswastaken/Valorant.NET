@@ -15,9 +15,9 @@ namespace Valorant.NET.Clients
         public readonly HttpClient _httpClient;
         private readonly IRiotApiResponseHandler _riotApiResponseHandler;
 
-        public RiotHttpClient(IRiotTokenResolver riotTokenResolver, IRiotApiResponseHandler riotApiResponseHandler)
+        public RiotHttpClient(IRiotTokenResolver riotTokenResolver, IRiotApiResponseHandler riotApiResponseHandler, HttpClient httpClient = null)
         {
-            _httpClient = new HttpClient();
+            _httpClient = httpClient ?? new HttpClient();
             _httpClient.DefaultRequestHeaders.Add(Constants.RIOT_API_TOKEN_HEADER_KEY, riotTokenResolver.Resolve());
             _riotApiResponseHandler = riotApiResponseHandler;
         }

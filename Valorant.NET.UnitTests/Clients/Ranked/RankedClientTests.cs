@@ -30,11 +30,13 @@ namespace Valorant.NET.UnitTests.Clients.Ranked
 
             var mockApiUrlResolver = new Mock<IRiotApiUrlResolver>();
             mockApiUrlResolver.Setup(x => x.Resolve(It.Is<ValorantEndpointRegion>(inputRegion => inputRegion == region), It.Is<string>(inputEndpoint => inputEndpoint == endpoint)))
-                .Returns(expectedUri);
+                .Returns(expectedUri)
+                .Verifiable();
 
             var mockRiotHttpClient = new Mock<IRiotHttpClient>();
             mockRiotHttpClient.Setup(x => x.GetAsync<RankedResponse>(It.Is<Uri>(inputUri => inputUri == expectedUri)))
-                .ReturnsAsync(new RankedResponse { ActId = act, Players = new List<Player> { new Player(), new Player() } });
+                .ReturnsAsync(new RankedResponse { ActId = act, Players = new List<Player> { new Player(), new Player() } })
+                .Verifiable();
 
             using var rankedClient = new RankedClient(mockRiotHttpClient.Object, mockApiUrlResolver.Object);
 

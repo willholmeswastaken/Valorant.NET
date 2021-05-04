@@ -25,11 +25,13 @@ namespace Valorant.NET.UnitTests.Clients.Content
 
             var mockApiUrlResolver = new Mock<IRiotApiUrlResolver>();
             mockApiUrlResolver.Setup(x => x.Resolve(It.Is<ValorantEndpointRegion>(inputRegion => inputRegion == region), It.Is<string>(inputEndpoint => inputEndpoint == endpoint)))
-                .Returns(expectedUri);
+                .Returns(expectedUri)
+                .Verifiable();
 
             var mockRiotHttpClient = new Mock<IRiotHttpClient>();
             mockRiotHttpClient.Setup(x => x.GetAsync<ContentResponse>(It.Is<Uri>(inputUri => inputUri == expectedUri)))
-                .ReturnsAsync(new ContentResponse { Version = expectContentVersion });
+                .ReturnsAsync(new ContentResponse { Version = expectContentVersion })
+                .Verifiable();
 
             using var contentClient = new ContentClient(mockRiotHttpClient.Object, mockApiUrlResolver.Object);
 

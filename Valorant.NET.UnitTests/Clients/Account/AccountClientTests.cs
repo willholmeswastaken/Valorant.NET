@@ -145,13 +145,15 @@ namespace Valorant.NET.UnitTests.Clients.Account
         private void ConfigureRiotHttpClientForPlayerResponse()
         {
             _mockPlayerResponseHttpClient.Setup(x => x.GetAsync<AccountResponse>(It.Is<Uri>(inputUri => inputUri == ExpectedUri)))
-                .ReturnsAsync(new AccountResponse { Puuid = PlayerPuuid, GameName = PlayerGameName, TagLine = PlayerTagLine });
+                .ReturnsAsync(new AccountResponse { Puuid = PlayerPuuid, GameName = PlayerGameName, TagLine = PlayerTagLine })
+                .Verifiable();
         }
 
         private void ConfigureRiotApiUrlResolver(string endpoint)
         {
             _mockRiotApiUrlResolver.Setup(x => x.Resolve(It.Is<NonValorantEndpointRegion>(inputRegion => inputRegion == PlayerRegion), It.Is<string>(inputEndpoint => inputEndpoint == endpoint)))
-                .Returns(ExpectedUri);
+                .Returns(ExpectedUri)
+                .Verifiable();
         }
     }
 }
