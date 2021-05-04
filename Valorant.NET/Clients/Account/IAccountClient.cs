@@ -1,10 +1,11 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Valorant.NET.Models;
 using Valorant.NET.Models.Account;
 
 namespace Valorant.NET.Clients.Account
 {
-    public interface IAccountClient
+    public interface IAccountClient : IDisposable
     {
         /// <summary>
         /// Retrieves the account by the riot id of the user i.e. SevenZ#2070

@@ -5,7 +5,7 @@ using Valorant.NET.Models.Ranked;
 
 namespace Valorant.NET.Clients.Ranked
 {
-    public interface IRankedClient
+    public interface IRankedClient : IDisposable
     {
         /// <summary>
         /// This returns the current leaderboard in ranked for a given region
