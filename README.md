@@ -22,6 +22,7 @@ All of which expose the relevant api endpoint methods to retrieve your response.
 - [x] Account/GetActiveShardByPuuid
 - [x] Content/GetContents
 - [x] Ranked/GetLeaderboardByAct
+- [ ] Expose a method to get leaderboardbycurrentact
 
 
 ### NOTE: As of present I cannot access these apis, so I will postpone this implementation until I do.
