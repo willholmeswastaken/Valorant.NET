@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <PackageId>ValorantDotNet</PackageId>
+    <Authors>willholmes</Authors>
+    <Company>willholmesdev</Company>
+    <Product>Valorant DotNet API</Product>
+    <Description>A package created to allow dotnet developers to easily integrate their products with the Valorant api.</Description>
+    <RepositoryUrl>https://github.com/willholmeswastaken/Valorant.NET</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
