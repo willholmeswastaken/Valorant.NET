@@ -21,7 +21,7 @@ namespace Valorant.NET.Clients.Account
             _riotApiUrlResolver = riotApiUrlResolver;
         }
 
-        public async Task<AccountResponse> GetByRiotId(string gameName, string tagLine, Region region = Region.Europe)
+        public async Task<AccountResponse> GetByRiotId(string gameName, string tagLine, NonValorantEndpointRegion region = NonValorantEndpointRegion.Europe)
         {
             if (string.IsNullOrWhiteSpace(gameName)) throw new ArgumentNullException(nameof(gameName));
             if (string.IsNullOrWhiteSpace(tagLine)) throw new ArgumentNullException(nameof(tagLine));
@@ -31,7 +31,7 @@ namespace Valorant.NET.Clients.Account
             return await GetAsync<AccountResponse>(url);
         }
 
-        public async Task<AccountResponse> GetByPuuid(string puuid, Region region = Region.Europe)
+        public async Task<AccountResponse> GetByPuuid(string puuid, NonValorantEndpointRegion region = NonValorantEndpointRegion.Europe)
         {
             if (string.IsNullOrWhiteSpace(puuid)) throw new ArgumentNullException(nameof(puuid));
 
@@ -40,7 +40,7 @@ namespace Valorant.NET.Clients.Account
             return await GetAsync<AccountResponse>(url);
         }
 
-        public async Task<AccountShardResponse> GetActivePlayerShard(string puuid, Region region = Region.Europe)
+        public async Task<AccountShardResponse> GetActivePlayerShard(string puuid, NonValorantEndpointRegion region = NonValorantEndpointRegion.Europe)
         {
             if (string.IsNullOrWhiteSpace(puuid)) throw new ArgumentNullException(nameof(puuid));
 

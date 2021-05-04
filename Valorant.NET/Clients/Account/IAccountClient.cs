@@ -13,7 +13,7 @@ namespace Valorant.NET.Clients.Account
         /// <param name="tagLine">2070</param>
         /// <param name="region">Api url region, choose the closest to you</param>
         /// <returns>Account details</returns>
-        Task<AccountResponse> GetByRiotId(string gameName, string tagLine, Region region = Region.Europe);
+        Task<AccountResponse> GetByRiotId(string gameName, string tagLine, NonValorantEndpointRegion region = NonValorantEndpointRegion.Europe);
 
         /// <summary>
         /// Retrieves the account by the riot puuid of the user.
@@ -21,7 +21,7 @@ namespace Valorant.NET.Clients.Account
         /// <param name="puuid">Player universally unique identifier</param>
         /// <param name="region">Api url region, choose the closest to you</param>
         /// <returns>Account details</returns>
-        Task<AccountResponse> GetByPuuid(string puuid, Region region = Region.Europe);
+        Task<AccountResponse> GetByPuuid(string puuid, NonValorantEndpointRegion region = NonValorantEndpointRegion.Europe);
 
 
         /// <summary>
@@ -29,6 +29,6 @@ namespace Valorant.NET.Clients.Account
         /// </summary>
         /// <param name="puuid">Player universally unique identifier</param>
         /// <returns>Active shard with puuid</returns>
-        Task<AccountShardResponse> GetActivePlayerShard(string puuid, Region region = Region.Europe);
+        Task<AccountShardResponse> GetActivePlayerShard(string puuid, NonValorantEndpointRegion region = NonValorantEndpointRegion.Europe);
     }
 }

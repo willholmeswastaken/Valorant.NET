@@ -13,6 +13,7 @@ namespace Valorant.NET.Clients.Ranked
         private readonly IRiotApiUrlResolver _riotApiUrlResolver;
 
         private const string RankedUrl = "/ranked/v1";
+        private const int MaximumPlayersReturnedByRequest = 200;
 
         public RankedClient(IRiotTokenResolver riotTokenResolver,
             IRiotApiUrlResolver riotApiUrlResolver,
@@ -22,12 +23,12 @@ namespace Valorant.NET.Clients.Ranked
             _riotApiUrlResolver = riotApiUrlResolver;
         }
 
-        public async Task<RankedResponse> GetLeaderboardByAct(string actId, int startPositionIndex, int lastPositionIndex, Region region = Region.Europe)
+        public async Task<RankedResponse> GetLeaderboardByAct(string actId, int startPositionIndex, int numberOfPlayersToReturn = MaximumPlayersReturnedByRequest, ValorantEndpointRegion region = ValorantEndpointRegion.EU)
         {
             if (string.IsNullOrWhiteSpace(actId)) throw new ArgumentNullException(actId);
-            if (startPositionIndex > lastPositionIndex) throw new LastPositionIndexLessThanStartingException(startPositionIndex, lastPositionIndex);
+            if ((startPositionIndex + 1) > numberOfPlayersToReturn) throw new StartPositionGreaterThanTotalPlayersReturnedException(startPositionIndex, numberOfPlayersToReturn);
 
-            var url = _riotApiUrlResolver.Resolve(region, $"{RankedUrl}/leaderboards/by-act/{actId}");
+            var url = _riotApiUrlResolver.Resolve(region, $"{RankedUrl}/leaderboards/by-act/{actId}?size={numberOfPlayersToReturn}&?startIndex={startPositionIndex}");
 
             return await GetAsync<RankedResponse>(url);
         }

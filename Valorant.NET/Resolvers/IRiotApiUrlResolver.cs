@@ -9,11 +9,19 @@ namespace Valorant.NET.Resolvers
     public interface IRiotApiUrlResolver
     {
         /// <summary>
-        /// Resolves the api request url
+        /// Resolves the api request url for non-valorant endpoints
         /// </summary>
         /// <param name="region">Defaulted to europe</param>
         /// <param name="endpoint">e.g /account/by-riot-id/{gameName}/{tagLine}</param>
         /// <returns></returns>
-        Uri Resolve(Region region, string endpoint);
+        Uri Resolve(NonValorantEndpointRegion region, string endpoint);
+
+        /// <summary>
+        /// Resolves the api request url for valorant endpoints
+        /// </summary>
+        /// <param name="region">Defaulted to europe</param>
+        /// <param name="endpoint">e.g /account/by-riot-id/{gameName}/{tagLine}</param>
+        /// <returns></returns>
+        Uri Resolve(ValorantEndpointRegion region, string endpoint);
     }
 }

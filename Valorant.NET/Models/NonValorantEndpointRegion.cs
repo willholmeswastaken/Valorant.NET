@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Valorant.NET.Models
 {
-    public enum Region
+    public enum NonValorantEndpointRegion
     {
         [EnumMember(Value = "americas")]
         Americas,
