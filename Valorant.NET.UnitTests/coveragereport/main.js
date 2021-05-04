@@ -228,13 +228,13 @@ var assemblies = [
       { "name": "Valorant.NET.Clients.Account.AccountClient", "rp": "Valorant.NET_AccountClient.html", "cl": 0, "ucl": 20, "cal": 20, "tl": 52, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 8, "lch": [], "bch": [], "hc": [] },
       { "name": "Valorant.NET.Clients.Content.ContentClient", "rp": "Valorant.NET_ContentClient.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 30, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Valorant.NET.Clients.Ranked.RankedClient", "rp": "Valorant.NET_RankedClient.html", "cl": 0, "ucl": 10, "cal": 10, "tl": 36, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 4, "lch": [], "bch": [], "hc": [] },
-      { "name": "Valorant.NET.Handlers.RiotApiResponseHandler", "rp": "Valorant.NET_RiotApiResponseHandler.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 15, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
+      { "name": "Valorant.NET.Handlers.RiotApiResponseHandler", "rp": "Valorant.NET_RiotApiResponseHandler.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 15, "ct": "LineCoverage", "mc": "-", "cb": 2, "tb": 2, "lch": [], "bch": [], "hc": [] },
       { "name": "Valorant.NET.Helpers.EnumHelpers", "rp": "Valorant.NET_EnumHelpers.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 21, "ct": "LineCoverage", "mc": "-", "cb": 2, "tb": 4, "lch": [], "bch": [], "hc": [] },
-      { "name": "Valorant.NET.Models.Exceptions.RiotApiException", "rp": "Valorant.NET_RiotApiException.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 20, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Valorant.NET.Models.Exceptions.MissingRiotApiTokenException", "rp": "Valorant.NET_MissingRiotApiTokenException.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 14, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Valorant.NET.Models.Exceptions.RiotApiException", "rp": "Valorant.NET_RiotApiException.html", "cl": 4, "ucl": 4, "cal": 8, "tl": 20, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Valorant.NET.Models.Exceptions.StartPositionGreaterThanTotalPlayersReturnedException", "rp": "Valorant.NET_StartPositionGreaterThanTotalPlayersReturnedException.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 18, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "Valorant.NET.Resolvers.RiotApiUrlResolver", "rp": "Valorant.NET_RiotApiUrlResolver.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 21, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "Valorant.NET.Resolvers.RiotTokenResolver", "rp": "Valorant.NET_RiotTokenResolver.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 14, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 2, "lch": [], "bch": [], "hc": [] },
-      { "name": "Valorant.NET.ServiceCollectionExtensions", "rp": "Valorant.NET_ServiceCollectionExtensions.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 20, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "Valorant.NET.Resolvers.RiotTokenResolver", "rp": "Valorant.NET_RiotTokenResolver.html", "cl": 6, "ucl": 0, "cal": 6, "tl": 16, "ct": "LineCoverage", "mc": "-", "cb": 2, "tb": 2, "lch": [], "bch": [], "hc": [] },
     ]},
 ];
 
