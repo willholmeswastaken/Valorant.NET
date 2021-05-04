@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Valorant.NET.Resolvers
+﻿namespace Valorant.NET.Resolvers
 {
     /// <summary>
     /// Responsible for retrieving the consuming clients riot api token

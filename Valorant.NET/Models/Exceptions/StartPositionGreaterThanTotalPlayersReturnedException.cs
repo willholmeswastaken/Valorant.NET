@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Valorant.NET.Models.Exceptions
 {
     public class StartPositionGreaterThanTotalPlayersReturnedException : Exception

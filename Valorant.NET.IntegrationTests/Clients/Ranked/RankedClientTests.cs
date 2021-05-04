@@ -21,7 +21,7 @@ namespace Valorant.NET.IntegrationTests.Clients.Ranked
         }
 
         [Fact] 
-        public async Task GetLeaderboardByAct_Should_return_200_ok()
+        public async Task GetLeaderboardByAct_Should_return_valid_response()
         {
             var expectedAmountOfPlayersReturned = 2;
             using var rankedClient = new RankedClient(new RiotTokenResolver(), new RiotApiUrlResolver(), new RiotApiResponseHandler());

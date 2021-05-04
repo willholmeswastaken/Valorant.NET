@@ -5,6 +5,9 @@ using Valorant.NET.Models.Ranked;
 
 namespace Valorant.NET.Clients.Ranked
 {
+    /// <summary>
+    /// Interacts with the Valorant Ranked endpoint.
+    /// </summary>
     public interface IRankedClient : IDisposable
     {
         /// <summary>

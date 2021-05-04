@@ -5,6 +5,9 @@ using Valorant.NET.Models.Account;
 
 namespace Valorant.NET.Clients.Account
 {
+    /// <summary>
+    /// Interacts with the Riot Account endpoint
+    /// </summary>
     public interface IAccountClient : IDisposable
     {
         /// <summary>
