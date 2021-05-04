@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using Newtonsoft.Json;
 
 namespace Valorant.NET.Models.Account
 {
+    [ExcludeFromCodeCoverage]
     public class AccountShardResponse
     {
         [JsonProperty("puuid")]

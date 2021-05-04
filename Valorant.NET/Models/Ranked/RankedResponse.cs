@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using Newtonsoft.Json;
 
 namespace Valorant.NET.Models.Ranked
 {
+    [ExcludeFromCodeCoverage]
     public class RankedResponse
     {
         [JsonProperty("actId")]

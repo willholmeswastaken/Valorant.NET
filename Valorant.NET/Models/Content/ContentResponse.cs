@@ -1,8 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Valorant.NET.Models.Content
 {
+    [ExcludeFromCodeCoverage]
     public class ContentResponse
     {
         [JsonProperty("version")]

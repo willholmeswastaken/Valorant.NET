@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Valorant.NET.Models.Content
 {
+    [ExcludeFromCodeCoverage]
     public class Spray
     {
         [JsonProperty("name")]

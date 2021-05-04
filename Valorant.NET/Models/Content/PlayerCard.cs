@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace Valorant.NET.Models.Content
 {
+    [ExcludeFromCodeCoverage]
     public class PlayerCard
     {
         [JsonProperty("name")]

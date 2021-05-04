@@ -1,8 +1,9 @@
-﻿using System;
+﻿using System.Diagnostics.CodeAnalysis;
 using Newtonsoft.Json;
 
 namespace Valorant.NET.Models.Ranked
 {
+    [ExcludeFromCodeCoverage]
     public class Player
     {
         [JsonProperty("puuid")]
