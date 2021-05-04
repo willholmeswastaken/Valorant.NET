@@ -1,6 +1,7 @@
 <h1 align="center">*Unofficial* Valorant Dotnet SDK</h1>
 <p align="center">This is a package built to allow .NET developers to interact with the valorant api.</p>
-
+![Downloads Badge](https://img.shields.io/nuget/dt/ValorantDotNet)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 # How to use
 In Startup.cs add this
 ```
