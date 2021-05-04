@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Valorant.NET.Clients;
 using Valorant.NET.Clients.Ranked;
 using Valorant.NET.Handlers;
 using Valorant.NET.Resolvers;
@@ -24,7 +25,7 @@ namespace Valorant.NET.IntegrationTests.Clients.Ranked
         public async Task GetLeaderboardByAct_Should_return_valid_response()
         {
             var expectedAmountOfPlayersReturned = 2;
-            using var rankedClient = new RankedClient(new RiotTokenResolver(), new RiotApiUrlResolver(), new RiotApiResponseHandler());
+            using var rankedClient = new RankedClient(new RiotHttpClient(new RiotTokenResolver(), new RiotApiResponseHandler()), new RiotApiUrlResolver());
 
             var response = await rankedClient.GetLeaderboardByAct(_fixture.Config.CurrentActId, 0, 2);
 

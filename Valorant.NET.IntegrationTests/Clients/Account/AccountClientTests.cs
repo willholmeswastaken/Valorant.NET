@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
 using System;
 using System.Threading.Tasks;
+using Valorant.NET.Clients;
 using Valorant.NET.Clients.Account;
 using Valorant.NET.Handlers;
 using Valorant.NET.Resolvers;
@@ -16,7 +17,7 @@ namespace Valorant.NET.IntegrationTests.Clients.Account
         public AccountClientTests(RiotApiTestFixture fixture)
         {
             _fixture = fixture;
-            _accountClient = new AccountClient(new RiotTokenResolver(), new RiotApiUrlResolver(), new RiotApiResponseHandler());
+            _accountClient = new AccountClient(new RiotHttpClient(new RiotTokenResolver(), new RiotApiResponseHandler()), new RiotApiUrlResolver());
         }
 
         [Fact]
